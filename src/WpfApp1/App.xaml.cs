@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace Prototype
+namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for App.xaml
