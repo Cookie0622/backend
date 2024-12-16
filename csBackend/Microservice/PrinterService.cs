@@ -8,7 +8,6 @@ public class PrinterService
     {
         var printers = new List<Printer>();
         return File.ReadAllLines("csv/printer.csv")
-            .Skip(1)
             .Select(x => x.Split(';'))
             .Select(x => new Printer
             {
