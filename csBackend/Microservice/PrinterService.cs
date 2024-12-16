@@ -7,7 +7,7 @@ public class PrinterService
     public Printer[] getPrinters()
     {
         var printers = new List<Printer>();
-        return File.ReadAllLines(@"C:\\Schule\\4.Klasse\\SYP\\csBackend\\csBackend\\csv\\printer.csv")
+        return File.ReadAllLines("csv/printer.csv")
             .Skip(1)
             .Select(x => x.Split(';'))
             .Select(x => new Printer
@@ -24,7 +24,7 @@ public class PrinterService
 
     public Printer addPrinter(Printer printer)
     {
-        File.AppendAllText(@"C:\\Schule\\4.Klasse\\SYP\\csBackend\\csBackend\\csv\\printer.csv", printer.ToString());
+        File.AppendAllText("csv/printer.csv", printer.ToString());
         return printer;
     }
 }
