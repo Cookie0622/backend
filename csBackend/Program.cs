@@ -10,7 +10,6 @@ builder.Services.AddSwaggerGen();
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
     serverOptions.ListenAnyIP(5192);
-    serverOptions.ListenAnyIP(7191, listenOptions => listenOptions.UseHttps());
 });
 
 var app = builder.Build();
@@ -18,6 +17,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
     app.UseCors(builder =>
     {
         builder
@@ -25,8 +26,6 @@ if (app.Environment.IsDevelopment())
         .AllowAnyMethod()
         .AllowAnyHeader();
     });
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
 
 //app.UseHttpsRedirection();

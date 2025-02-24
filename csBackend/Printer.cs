@@ -11,7 +11,7 @@ namespace csBackend
 
         public override string ToString()
         {
-            return $"\n{PrinterId};{MaschinenName};{MaschinenFormatL};{MaschinenFormatB};{FarbFormat};{UnbedruckbarerRand}";
+            return $"{PrinterId};{MaschinenName};{MaschinenFormatL};{MaschinenFormatB};{FarbFormat};{UnbedruckbarerRand}\n";
         }
     }
 }

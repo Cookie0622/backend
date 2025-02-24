@@ -26,4 +26,18 @@ public class PrinterService
         File.AppendAllText("csv/printer.csv", printer.ToString());
         return printer;
     }
+
+    internal void deletePrinter(int id)
+    {
+        var lines = File.ReadAllLines("csv/printer.csv").ToList();
+        lines.RemoveAt(id - 1);
+        File.WriteAllLines("csv/printer.csv", lines);
+    }
+
+    internal void updatePrinter(int id, Printer printer)
+    {
+        var lines = File.ReadAllLines("csv/printer.csv").ToList();
+        lines[id - 1] = printer.ToString();
+        File.WriteAllLines("csv/printer.csv", lines);
+    }
 }

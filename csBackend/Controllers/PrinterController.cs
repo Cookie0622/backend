@@ -17,16 +17,28 @@ namespace csBackend.Controllers
             _printerService = new PrinterService();
         }
 
-        [HttpGet(Name = "Printer")]
+        [HttpGet("/Printer")]
         public IEnumerable<Printer> Get()
         {
             return _printerService.getPrinters();
         }
 
-        [HttpPost(Name = "Printer")]
+        [HttpPost("/Printer")]
         public Printer Post(Printer printer)
         {
             return _printerService.addPrinter(printer);
+        }
+
+        [HttpDelete("/Printer/{id}")]
+        public void Delete(int id)
+        {
+            _printerService.deletePrinter(id);
+        }
+
+        [HttpPut("/Printer/{id}")]
+        public void Put(int id, [FromBody] Printer printer)
+        {
+            _printerService.updatePrinter(id, printer);
         }
     }
 }
