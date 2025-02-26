@@ -1,4 +1,4 @@
-namespace csBackend
+namespace csbackend
 {
     public class Printer
     {
@@ -8,6 +8,7 @@ namespace csBackend
         public int MaschinenFormatB { get; set; }
         public required string FarbFormat { get; set; }
         public int UnbedruckbarerRand { get; set; }
+        public int inaktiv { get; set; }
 
         public override string ToString()
         {

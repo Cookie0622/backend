@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csBackend", "csBackend\csBackend.csproj", "{58D81618-4BDE-414E-8018-07B8FCDFB9C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csbackend", "csBackend\csbackend.csproj", "{58D81618-4BDE-414E-8018-07B8FCDFB9C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

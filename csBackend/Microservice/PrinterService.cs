@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace csBackend.Microservice;
+namespace csbackend.Microservice;
 
 public class PrinterService
 {
@@ -17,6 +17,7 @@ public class PrinterService
                 MaschinenFormatB = int.Parse(x[3]),
                 FarbFormat = x[4],
                 UnbedruckbarerRand = int.Parse(x[5]),
+                inaktiv = int.Parse(x[6])
             })
             .ToArray();
     }

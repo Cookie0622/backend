@@ -1,4 +1,4 @@
-﻿namespace csBackend
+﻿namespace csbackend
 {
     public class Customer
     {

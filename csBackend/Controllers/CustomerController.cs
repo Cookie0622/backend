@@ -1,8 +1,8 @@
-﻿using csBackend.Microservice;
+﻿using csbackend.Microservice;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace csBackend.Controllers
+namespace csbackend.Controllers
 {
     [ApiController]
     [Route("[controller]")]
